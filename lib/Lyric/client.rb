@@ -1,7 +1,7 @@
 require_relative 'auth/rest_api'
 
 module Lyric
-  class Thermostat
+  class Client
 
     def initialize(access_token = nil)
       @access_token = access_token

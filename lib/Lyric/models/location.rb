@@ -1,12 +1,14 @@
 module Lyric
-  class Locations
-    attr_accessor :location_id, :name, :country, :postal_code, :devices
+  module Model
+    class Location
+      attr_accessor :device_id, :name, :location_id
 
-    def initialize(location_obj)
-      @location_id = location_obj['locationID']
-      @name = location_obj['name']
-      @country = location_obj['country']
-      @postal_code = location_obj['postal_code']
-      @devices = location_obj['devices']
+      def initialize(location_obj)
+        @location_id = location_obj['locationID']
+        location_obj.each do |l|
+          @device_id = Lyric::Model::DeviceList.new(l['device_id'])
+        end
+      end
+    end
   end
 end
