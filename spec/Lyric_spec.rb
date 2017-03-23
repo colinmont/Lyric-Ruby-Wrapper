@@ -1373,9 +1373,23 @@ describe Lyric::Model::Device do
   
   describe '#update'
     it 'sends a call to the devices api and updates the variables' do
-      @lyric.location[0].device[0].update
-      expect(@lyric.location[0].device[0].date_updated).not_to be nil
-      expect(@lyric.location[0].device[0].indoor_temp).not_to be nil
+      token = "bmdAwpP3XsAbtagJNyAAET463qa5"
+      @lyric.location[0].device[0].update(token)
+      expect(@lyric.location[0].device[0].response).to be nil
+      #expect(@lyric.location[0].device[0].indoor_temp).not_to be nil
     end
+  
+  
+describe Lyric::RestAPIMethods do
+  
+  describe '#user'
+  it 'gets a response from Honeywell' do
+    lyric = Lyric::Client.new("bmdAwpP3XsAbtagJNyAAET463qa5")
+    l = lyric.user
+    expect(l.username).to eq("colinmmontgomery@gmail.com")
+  end
+  
+end
+
   
 end
