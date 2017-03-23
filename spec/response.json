@@ -1,0 +1,175 @@
+[
+  {
+    "locationID": 86889,
+    "name": "24 Somerset",
+    "streetAddress": "24 Somerset St ",
+    "city": "Kinkora",
+    "state": "PE",
+    "country": "Canada",
+    "zipcode": "C0B 1N0",
+    "devices": [
+      {
+        "settings": {
+          "homeSetPoints": {
+            "homeHeatSP": 22,
+            "homeCoolSP": 25.5,
+            "units": "Celsius"
+          },
+          "awaySetPoints": {
+            "awayHeatSP": 16.5,
+            "awayCoolSP": 29.5,
+            "smartCoolSP": 26.5,
+            "smartHeatSP": 13,
+            "useAutoSmart": true,
+            "units": "Celsius"
+          },
+          "hardwareSettings": {
+            "volume": 10,
+            "maxBrightness": 255,
+            "maxVolume": 10
+          },
+          "fan": {
+            "allowedModes": [
+              "Auto",
+              "On",
+              "Circulate"
+            ],
+            "changeableValues": {
+              "mode": "Auto"
+            },
+            "fanRunning": false
+          },
+          "temperatureMode": {
+            "feelsLike": true,
+            "air": true
+          },
+          "specialMode": {
+            "autoChangeoverActive": true
+          }
+        },
+        "isAlive": true,
+        "isUpgrading": false,
+        "macID": "00D02D5A8B3A",
+        "thermostatVersion": "01.03.12.00",
+        "scheduleStatus": "Resume",
+        "allowedTimeIncrements": 15,
+        "deviceClass": "Thermostat",
+        "deviceType": "Thermostat",
+        "deviceID": "TCC-1330475",
+        "userDefinedDeviceName": "DreamStat",
+        "name": "DreamStat",
+        "schedule": {
+          "scheduleType": "Timed",
+          "scheduleSubType": "NA"
+        },
+        "isProvisioned": false,
+        "deviceSettings": {},
+        "units": "Celsius",
+        "indoorTemperature": 16.5,
+        "outdoorTemperature": 2,
+        "allowedModes": [
+          "Cool",
+          "Heat",
+          "Off"
+        ],
+        "deadband": 0,
+        "hasDualSetpointStatus": false,
+        "minHeatSetpoint": 4.5,
+        "maxHeatSetpoint": 32,
+        "minCoolSetpoint": 10,
+        "maxCoolSetpoint": 37,
+        "changeableValues": {
+          "mode": "Heat",
+          "autoChangeoverActive": true,
+          "heatSetpoint": 16.5,
+          "coolSetpoint": 29.5,
+          "heatCoolMode": "Heat"
+        },
+        "operationStatus": {
+          "mode": "EquipmentOff"
+        },
+        "smartAway": {
+          "active": false,
+          "timeOfDay": "00:00:00",
+          "durationInHours": 5,
+          "durationInDays": 0,
+          "lastUsedFormat": "DurationInHours",
+          "endsIn": "2017-03-20T23:04:00-03:00"
+        },
+        "indoorHumidity": 32,
+        "indoorHumidityStatus": "Measured"
+      }
+    ],
+    "users": [
+      {
+        "userID": 107067,
+        "username": "colinmmontgomery@gmail.com",
+        "firstname": "Colin",
+        "lastname": "Montgomery",
+        "created": 1476910225,
+        "deleted": -62135596800,
+        "activated": true,
+        "connectedHomeAccountExists": true,
+        "locationRoleMapping": [
+          {
+            "locationID": 86889,
+            "role": "Adult",
+            "locationName": "24 Somerset",
+            "status": 1
+          }
+        ]
+      },
+      {
+        "userID": 107586,
+        "username": "plnkpan7h3r@gmail.com",
+        "firstname": "Sarah",
+        "lastname": "Montgomery",
+        "created": 1476998221,
+        "deleted": -62135596800,
+        "activated": true,
+        "connectedHomeAccountExists": true,
+        "locationRoleMapping": [
+          {
+            "locationID": 86889,
+            "role": "Adult",
+            "locationName": "24 Somerset",
+            "status": 1
+          }
+        ]
+      },
+      {
+        "userID": 168442,
+        "username": "montgomery.sarahm@gmail.com",
+        "firstname": "Sarah",
+        "lastname": "Montgomery",
+        "created": 1482782995,
+        "deleted": -62135596800,
+        "activated": false,
+        "connectedHomeAccountExists": true,
+        "locationRoleMapping": [
+          {
+            "locationID": 86889,
+            "role": "Adult",
+            "locationName": "24 Somerset",
+            "status": 1
+          }
+        ]
+      }
+    ],
+    "timeZone": "Atlantic",
+    "daylightSavingTimeEnabled": true,
+    "geoFences": [
+      {
+        "geoFenceID": 87270,
+        "latitude": 46.3263855,
+        "longitude": -63.6048164,
+        "radius": 1836,
+        "geoOccupancy": {
+          "withinFence": 0,
+          "outsideFence": 1
+        }
+      }
+    ],
+    "geoFenceEnabled": true
+  }
+]
