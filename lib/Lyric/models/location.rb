@@ -14,7 +14,7 @@ module Lyric
         @device = []
         
         location_obj[:devices].each do |d|
-          @device = Lyric::Model::Device.new(d)
+          @device << Lyric::Model::Device.new(d)
         end
         
       end

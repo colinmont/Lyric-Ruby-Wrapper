@@ -1362,10 +1362,20 @@ describe Lyric::Model::Device do
     ]
     @lyric = Lyric::Model::User.new(response)
   end
+  describe '#initialize'
+    it 'sets correct the device name' do
+      expect(@lyric.location[1].device[1].name).to eq("T6")
+      #need to be able to assign each device to a location - think it needs to be a sub class??
+    end
+    it 'creates an array with all the settings' do
+      expect(@lyric.location[0].device[0].settings).to include(:homeSetPoints,:awaySetPoints, :hardwareSettings)
+    end
   
-  it 'sets the device name' do
-    expect(@lyric.location[1].device.name).to eq("Round")
-    #need to be able to assign each device to a location - think it needs to be a sub class??
-  end
+  describe '#update'
+    it 'sends a call to the devices api and updates the variables' do
+      @lyric.location[0].device[0].update
+      expect(@lyric.location[0].device[0].date_updated).not_to be nil
+      expect(@lyric.location[0].device[0].indoor_temp).not_to be nil
+    end
   
 end

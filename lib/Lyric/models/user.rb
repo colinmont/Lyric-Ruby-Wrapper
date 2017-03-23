@@ -12,7 +12,6 @@ module Lyric
         @date_created = user_obj[:users][0][:created]
         @date_deleted = user_obj[:users][0][:deleted]
         @location = []
-        
         user.each do |u|
           @location << Lyric::Model::Location.new(u)
         end
