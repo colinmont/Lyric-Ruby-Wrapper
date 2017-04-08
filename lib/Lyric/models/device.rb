@@ -20,11 +20,11 @@ module Lyric
       def update(access_token)
         api_address = "https://api.honeywell.com/v2/devices/"
         
-        #TODO: Update API call with headers and token
+        
         @response = HTTParty.get("#{api_address}#{@device_type}/#{@device_id}?apikey=H5lJQeAy7qJeOkhLWovSG1S2uNJIQkzM",
                         :headers => {"Authorizatiion" => "Bearer #{access_token}"})
       
-        device_obj = JSON.parse(response.body)
+        device_obj = JSON.parse(@response.body)
       
         
         @name = device_obj[:userDefinedDeviceName]

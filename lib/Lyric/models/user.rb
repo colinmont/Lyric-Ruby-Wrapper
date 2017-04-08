@@ -1,7 +1,7 @@
 module Lyric
   module Model
     class User
-      attr_accessor :user_id, :username, :first_name, :last_name, :date_created, :date_deleted, :location
+      attr_accessor :user_id, :username, :first_name, :last_name, :date_created, :date_deleted, :location, :user_obj
 
       def initialize(user)
         user_obj = user[0][:users][0]
