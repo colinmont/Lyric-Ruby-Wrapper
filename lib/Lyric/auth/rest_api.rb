@@ -10,7 +10,7 @@ module Lyric
                               :headers => {"Authorizatiion" => "Bearer #{self.token}"})
       
       #response = File.get('response.json')
-      user = Lyric::Model::User.new(response)
+      Lyric::Model::User.new(response)
     end
   end
 end
