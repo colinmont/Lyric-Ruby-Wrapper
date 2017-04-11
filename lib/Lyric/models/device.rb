@@ -6,15 +6,15 @@ module Lyric
       attr_accessor :name, :device_id, :units, :mac_id, :settings, :indoor_temp, :indoor_humidity, :outdoor_temp, :device_type, :date_updated, :response
 
       def initialize(device_obj)
-        @name = device_obj[:userDefinedDeviceName]
-        @device_id = device_obj[:deviceID]
-        @device_type = device_obj[:deviceType]
-        @units = device_obj[:units]
-        @mac_id = device_obj[:macID]
-        @settings= device_obj[:settings]
-        @indoor_temp = device_obj[:indoorTemperature]
-        @indoor_humidity = device_obj[:indoorHumidity]
-        @outdoor_temp  = device_obj[:outdoorTemperature]
+        @name =             device_obj['userDefinedDeviceName']
+        @device_id =        device_obj['deviceID']
+        @device_type =      device_obj['deviceType']
+        @units =            device_obj['units']
+        @mac_id =           device_obj['macID']
+        @settings=          device_obj['settings']
+        @indoor_temp =      device_obj['indoorTemperature']
+        @indoor_humidity =  device_obj['indoorHumidity']
+        @outdoor_temp  =    device_obj['outdoorTemperature']
       end
       
       def update(access_token)
