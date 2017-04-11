@@ -7,10 +7,9 @@ module Lyric
     def user
      # api_address = 'https://api.honeywell.com/v2/'
       response = HTTParty.get("https://api.honeywell.com/v2/locations?apikey=H5lJQeAy7qJeOkhLWovSG1S2uNJIQkzM",
-                              :headers => {"Authorizatiion" => "Bearer #{self.token}"})
-      
-      #response = File.get('response.json')
-      Lyric::Model::User.new(response)
+                              :headers => {"Authorization" => "Bearer #{self.token}"})
+      json = JSON.parse(response)
+      Lyric::Model::User.new(json)
     end
   end
 end
