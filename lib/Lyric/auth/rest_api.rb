@@ -8,7 +8,8 @@ module Lyric
      # api_address = 'https://api.honeywell.com/v2/'
       response = HTTParty.get("https://api.honeywell.com/v2/locations?apikey=H5lJQeAy7qJeOkhLWovSG1S2uNJIQkzM",
                               :headers => {"Authorization" => "Bearer #{self.access_token}"})
-        if response.class == Hash
+        
+        if response.is_a?(Hash)
             response['message']
         else
             Lyric::Model::User.new(response)
