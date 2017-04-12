@@ -11,7 +11,7 @@ module Lyric
             "Authorization" => "Bearer #{self.access_token}"
         }
         query = {
-            "apikey" => H5lJQeAy7qJeOkhLWovSG1S2uNJIQkzM
+            "apikey" => "H5lJQeAy7qJeOkhLWovSG1S2uNJIQkzM"
         }
         
         response = HTTParty.get("https://api.honeywell.com/v2/locations",
