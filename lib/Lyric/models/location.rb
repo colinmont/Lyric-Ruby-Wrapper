@@ -13,12 +13,12 @@ module Lyric
         @zipcode =        location_obj['zipcode']
         @device = []
         
-        if location_obj[:devices].count > 1
-          location_obj[:devices].each do |d|
+        if location_obj['devices'].count > 1
+          location_obj['devices'].each do |d|
             @device << Lyric::Model::Device.new(d)
           end
         else
-          @device << Lyric::Model::Device.new(location_obj[:devices][0])
+          @device << Lyric::Model::Device.new(location_obj['devices'][0])
         end
       end
     end
